@@ -1,11 +1,5 @@
 import { useState } from 'react';
 
-const initialItems = [
-  { id: 1, description: 'Passports', quantity: 2, packed: false },
-  { id: 2, description: 'Socks', quantity: 12, packed: true },
-  { id: 3, description: 'Charger', quantity: 1, packed: false },
-];
-
 function App() {
   const [items, setItems] = useState([]);
 
@@ -37,7 +31,6 @@ function Form({ onAddItems }) {
     if (!description) return;
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
 
     onAddItems(newItem);
 
